@@ -1,6 +1,6 @@
 # tyut-novpn
 在服务器上搭建MotionPro客户端，达到免连VPN访问tyut校园内网的目的  
-[TOC]
+
 # 一、安装
 ps:请全程在root环境下执行
 
@@ -37,9 +37,9 @@ yum install -y sudo vim git curl
 `./connect.sh restart`: 重新连接VPN
 
 # 四、未来计划
-[x] 搭建http服务，以支持直接访问  
-[x] 将MotionPro安装包集成在内
-[x] 一键部署脚本
+- [ ] 搭建http服务，以支持直接访问  
+- [ ] 将MotionPro安装包集成在内  
+- [ ] 一键部署脚本
 
 # 五、bug反馈
 若发现脚本使用时存在问题，如：服务器失联、连接失败等，可以发issue提交bug
