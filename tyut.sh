@@ -64,9 +64,9 @@ stop() {
     pkill -9 vpnd
     echo -e "MotionPro stopped"
     if [ ${release} == 'ubuntu' ]; then
-        sed -i '/tyut crontab/d' /var/spool/cron/crontabs/root
+        sed -i "/${script_path} crontab/d" /var/spool/cron/crontabs/root
     else
-        sed -i '/tyut crontab/d' /var/spool/cron/root
+        sed -i "/${script_path} crontab/d" /var/spool/cron/root
     fi
     echo -e "cron deleted"
 }
@@ -95,9 +95,9 @@ start() {
                     echo -e "connection failed" && exit 1
                 fi
                 if [ ${release} == 'ubuntu' ]; then
-                    echo "*/1 * * * * ${0} crontab >>/tmp/tyut.log 2>&1" >>/var/spool/cron/crontabs/root
+                    echo "*/1 * * * * ${script_path} crontab >>/tmp/tyut.log 2>&1" >>/var/spool/cron/crontabs/root
                 else
-                    echo "*/1 * * * * ${0} crontab >>/tmp/tyut.log 2>&1" >>/var/spool/cron/root
+                    echo "*/1 * * * * ${script_path} crontab >>/tmp/tyut.log 2>&1" >>/var/spool/cron/root
                 fi
                 if [ $? -eq 0 ]; then
                     echo -e "cron added"
