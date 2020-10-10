@@ -12,12 +12,19 @@ pps:仅在Ubuntu 18.04 LTS及Centos 7上测试过，若出现安装及使用bug�
 ## 下载  
 克隆本仓库  
 ```
-git clone https://github.com/bla58351/tyut-novpn.git && cd tyut-novpn
-```  
+git clone https://github.com/bla58351/tyut-novpn.git
+```
+(国内加速)
+```
+git clone https://gitee.com/bla58351/tyut-novpn.git
+```
   
 ## 安装 && 使用  
   
-执行`./tyut.sh start`,按步骤即可食用。  
+```
+cd tyut-novpn && chmod +x tyut.sh
+```
+然后执行`./tyut.sh start`,按步骤即可食用。  
   
 # usage  
   
@@ -26,8 +33,8 @@ git clone https://github.com/bla58351/tyut-novpn.git && cd tyut-novpn
 `restart`:重新连接  
 `reset`:重新设置个人信息  
   
-# bug反馈  
-若发现脚本使用时存在问题，如：服务器失联、连接失败等，可以发issue提交bug  
+# 反馈  
+若发现脚本使用时存在问题或对脚本功能有意见或建议的，发个issue吧. (*^_^*)  
   
 # License  
 MIT  
